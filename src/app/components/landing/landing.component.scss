@@ -1,0 +1,176 @@
+ .fondoMascotas{
+    background-image: url('/assets/images/fondo_mascota.jpg'); 
+     //  background-repeat: no-repeat;
+     background-size: cover; 
+     height: 25vh;
+     border-bottom: solid #99b21a;
+     animation: cambiarFondo 15s infinite;
+     background-image: url('/assets/images/fondo_mascota.jpg'); 
+ }
+
+ @keyframes cambiarFondo {
+    0%   {  background-image: url('/assets/images/fondo_mascota2.jpg'); }
+  //  25%   { background-image: url('/assets/images/fondo_mascota2.jpg'); }
+    50%   { background-image: url('/assets/images/fondo_mascota3.jpg'); }
+  //  75%  { background-image: url('/assets/images/fondo_mascota4jpg'); }
+    100%   {  background-image: url('/assets/images/fondo_mascota4.jpg'); }
+}
+  
+.ImgMascota{ 
+    margin-top: 25%;
+    border-radius: 50%;
+    border: solid 5px white;
+}
+ 
+.nameMascota > h1{
+    font-family: Lucida, Handwriting, Cursive; 
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #ffffff;
+    animation: shadows 5s cubic-bezier(0.51, 0.63, 1, 0.53) infinite, move 1.2s ease-in infinite;
+    letter-spacing: 0.4rem;
+    padding-left: 10px;
+    width: 100%;
+}
+
+@keyframes shadows {
+    0% {
+      text-shadow: none;
+    }
+  
+    10% {
+      text-shadow: 3px 3px 0 #601ccc;
+    }
+  
+    20% {
+      text-shadow: 3px 3px 0 #f49b90, 6px 6px 0 #f28b7d;
+    }
+  
+    30% {
+      text-shadow: 3px 3px 0 #f49b90, 6px 6px 0 #5c3b8e, 9px 9px #f07a6a;
+    }
+  
+    40% {
+      text-shadow: 3px 3px 0 #f49b90, 6px 6px 0 #f28b7d, 9px 9px #f07a6a, 12px 12px 0 #ee6352;
+    }
+  
+    50% {
+      text-shadow: 3px 3px 0 #f49b90, 6px 6px 0 #f28b7d, 9px 9px #f07a6a, 12px 12px 0 #ee6352;
+    }
+  
+    60% {
+      text-shadow: 3px 3px 0 #f49b90, 6px 6px 0 #f28b7d, 9px 9px #f07a6a, 12px 12px 0 #ee6352;
+    }
+  
+    70% {
+      text-shadow: 3px 3px 0 #f49b90, 6px 6px 0 #f28b7d, 9px 9px #f07a6a;
+    }
+  
+    80% {
+      text-shadow: 3px 3px 0 #f49b90, 6px 6px 0 #f28b7d;
+    }
+  
+    90% {
+      text-shadow: 3px 3px 0 #f49b90;
+    }
+  
+    100% {
+      text-shadow: none;
+    }
+  }
+  
+
+
+ .fondoMascotas{
+    background-color: rgb(153, 178, 26);
+    background-repeat: no-repeat;
+    background-size: cover; 
+ }
+
+ .infoMascota{
+    padding-top: 25%;
+    color: white;
+  //  background-image: url('/assets/images/fondo_mascota3.jpg');
+    background-color: #47520b;
+    
+    height: 100vh;
+ }
+
+ .centrar{
+    text-align: center;
+ }
+
+ .OpcionesMascota{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    column-gap: 5%;
+    padding-top: 10%;
+
+    button{
+        background: white;
+        color: black;
+    }
+}
+ 
+
+.DatosMascota{ 
+    padding-top: 10%;
+    .ribbon{
+        font-size: 20px;
+        position: relative;
+        display: inline-block;
+        margin: 5% 0;
+        text-align: center;
+      }
+      .text{
+        display: inline-block;
+        padding: 5%;
+        min-width: 15em;
+        line-height: 1.2em;
+        background: #94eb65;
+        position: relative;
+        color: #280b83;
+      }
+      .ribbon:after,.ribbon:before,
+      .text:before,.text:after,
+      .bold:before{
+        content:'';
+        position:absolute;
+        border-style:solid;
+      }
+      .ribbon:before{
+        top:0.3em; left:0.2em;
+        width:100%; height:100%;
+        border:none;
+        background:#68ff17;
+        z-index:-2;
+      }
+      .text:before{
+        bottom:100%; left:0;
+        border-width: .5em .7em 0 0;
+        border-color: transparent #84fc44 transparent transparent;
+      }
+      .text:after{
+        top:100%; right:0;
+        border-width: .5em 2em 0 0;
+        border-color: #68ff17  transparent transparent transparent;
+      }
+      .ribbon:after, .bold:before{
+        top:0.5em;right:-2em;
+        border-width: 1.1em 1em 1.1em 3em;
+        border-color: #FECC30 transparent #FECC30 #FECC30;
+        z-index:-1;
+      }
+      .bold:before{
+        border-color: #68ff17 transparent #EBECED #EBECED;
+        top:0.7em;
+        right:-2.3em;
+      }
+      
+
+}
+
+
