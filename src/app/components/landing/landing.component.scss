@@ -30,8 +30,7 @@
     font-size: 35px;
     color: #ffffff;
     animation: shadows 5s cubic-bezier(0.51, 0.63, 1, 0.53) infinite, move 1.2s ease-in infinite;
-    letter-spacing: 0.4rem;
-    padding-left: 10px;
+    letter-spacing: 0.4rem; 
     width: 100%;
 }
 
@@ -126,12 +125,12 @@
         text-align: center;
       }
       .text{
-        display: inline-block;
+        display: flex;
         padding: 5%;
-        min-width: 15em;
-        line-height: 1.2em;
+        min-width: 12em;
+        /* line-height: 1.2em; */
         background: #94eb65;
-        position: relative;
+        /* position: relative; */
         color: #280b83;
       }
       .ribbon:after,.ribbon:before,
@@ -174,3 +173,7 @@
 }
 
 
+
+.infoRibbon{
+    text-align: left;
+}
