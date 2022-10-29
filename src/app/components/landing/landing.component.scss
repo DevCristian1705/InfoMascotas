@@ -1,29 +1,68 @@
 .fondoMascotaspc{
-  
-  .card-mascota{ 
-    display: inline-grid;
-    border-radius: 25px;
-    margin: 5% 0;
-    width: 80%;
-    height: 75vh;
-    padding: 0 !important;
+  padding: 5%;
 
     .grid-card{
+      border-radius: 20px;
       display: grid;
       grid-template-columns: 30% 70%;
-
+      background-color: white;
+      text-align: center;
+      
       .foto{
         padding: 5%;
         background-color:#e0f6fd;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
+        border-radius: 15px;
 
         h1{
           margin-top: 5%;
         }
       }
+
+
+      
+    .info-card{
+      text-align: left; 
+
+      .content_info_card{
+        margin: 5%;
+      }
+
+      .info_titulo{
+          p{
+            font-weight: 500;
+            font-size: 25px;
+          }
+          span{
+            border-bottom: solid 3px black;
+          }
+      }
+
+      .bloque_1, .bloque_2{
+        margin: 3% 0;
+      }
+
+      .bloque_3{
+        margin: 5% 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        mat-card{
+          border-radius: 25px;
+          margin: 3%;
+          text-align: center;
+        }
+
+        .info_titulo2{
+          p{
+            font-weight: 500;
+            font-size: 18px;
+          }
+        }
+      }
     }
-  }
+
+    }
+  
 }
 
 
@@ -62,45 +101,3 @@
     }
 }
 
-
-.info-card{
-  text-align: left;
-  background: white;
-
-  .content_info_card{
-    margin: 5%;
-  }
-
-  .info_titulo{
-      p{
-        font-weight: 500;
-        font-size: 25px;
-      }
-      span{
-        border-bottom: solid 3px black;
-      }
-  }
-
-  .bloque_1, .bloque_2{
-    margin: 3% 0;
-  }
-
-  .bloque_3{
-    margin: 5% 0;
-    display: grid;
-    grid-template-columns: 50% 50%;
-
-    mat-card{
-      border-radius: 25px;
-      margin: 3%;
-      text-align: center;
-    }
-
-    .info_titulo2{
-      p{
-        font-weight: 500;
-        font-size: 18px;
-      }
-    }
-  }
-}

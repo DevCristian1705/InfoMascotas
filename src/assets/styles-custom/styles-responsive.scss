@@ -8,95 +8,82 @@
   }
  
   #movil{
-    display: block !important; 
-    .fondoMascotas{
-      background-image: url('/assets/images/fondo_mascota3.jpg'); 
-      padding-bottom: 50%;
-    }
+    display: block !important;  
+    text-align: center !important;  
+    padding: 5% 2%;
+
+      .ImgMascota{  
+        border-radius: 50%;
+        border: solid 8px white;
+        margin: 15% 0% 5% 0;
+        width: 50%;
+      }
+            
+      .nameMascota{ 
+        font-weight: bold;
+        font-size: 35px;  
+      }
     
-    .ImgMascota{  
-      border-radius: 50%;
-      border: solid 8px white;
-      margin: 25% 0% 5% 0;
-      width: 50%;
-    }
-    
-    .nameMascota{
-    font-size: 48px;
-    line-height: 50px;
-    font-weight: bold;
-    }
-    
-    .nameMascota > h1{
-      font-family: Lucida, Handwriting, Cursive; 
-      text-align: center;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 35px;
-      color: #7c3a3a;
-      letter-spacing: 0.4rem; 
-      width: 100%;
-    }
-    
-    .infoMascota{ 
-      margin-top: -25%;
-      height: 60vh;
-      border-radius: 50px;
-      border: solid 3px #646068; 
-      background-color: #ffffff;
-      text-emphasis: left; 
-      border-bottom-left-radius: 200px 150px;
-      border-top-right-radius: 200px 150px;
-      border: solid 8px #92bd28; 
-    }
-    
-    .centrar{
-      text-align: center;
-    }
-    
-    .OpcionesMascota{
-      display: grid; 
-      grid-gap: 5%; 
-      padding: 10%;
-    
-      .example-button-container{
-        display: grid; 
-        grid-template-columns: 50px 1fr;
-        align-items: center;
-    
-        span{
-          text-align: left;
-          margin-left: 10%;
-          font-size: 16px;
+      .razamovil{
+        font-weight: bold;
+        font-size: 30px;  
+      }
+      
+      .OpcionesMascota{ 
+        justify-content: center;
+        display: flex;
+        grid-gap: 5%; 
+        padding: 8%; 
+
+        button{
+          background: white; 
+          box-shadow: 1px 1px 1px 3px salmon;
+        }
+      } 
+
+      .info_bloque_1{
+        background-color: white;
+        border-radius: 25px;
+        padding: 5%;
+        margin: 5% 2%;
+        
+        .titulo_bloque_1{
+          font-size: 20px;
           font-weight: bold;
-    
-          a{
-            text-decoration: none;
+        }
+      }
+
+      .info_bloque_2{
+        background-color: white;
+        border-radius: 25px;
+        padding: 5%;
+        margin: 5% 3%;
+     
+
+        .titulo_bloque_1{
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .titulo_bloque_2{
+          display: flex; 
+          margin: 0 0 5% 0;
+          p{
+            margin: 3%;
+            font-size: 20px;
+            text-align: left;
+            font-weight: 500;
           }
-        }  
-      } 
-    
-      button{
-        background: white;
-        color: black;
-      } 
-    }
-    
+        }
+  
+        .detalles_bloque_2{
+          display: grid;
+          grid-template-columns: 40% 60%;
+          text-align: left;
+          margin: 3%;
+        }
+      }
 
-    mat-card{ 
-      display: block;
-      position: relative;
-      padding: 16px;
-      border-radius: 25px;
-      margin: 5%;
-    }
-
-    .info{
-      display: grid;
-      grid-template-columns: 150px 1fr; 
-      margin: 5%;
-    }
-    
   }
 
 }
