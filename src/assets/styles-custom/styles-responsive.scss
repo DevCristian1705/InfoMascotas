@@ -3,150 +3,161 @@
 /** RESPONSIVE - MOVILE**///
 
 @media (max-width : 688px){ 
-
-    .table_list{
-      margin: 0 !important;
-    }
+  #pc{
+    display: none !important;
+  }
  
-    ._navbar {
-        grid-template-columns: 90% 10% !important;
-    }
-
-    .botones-menu-medio, .footer_bloque_movile, .menu-large{
-        display: none !important;
-    }
-  
-    .cambiar_movile, .menu-medio{
-        display: block !important;
-    }
-  
-    .grilla_bloque_footer, .bloque_cabecera{
-        margin: 0% !important;
-        display: grid !important;
-        grid-template-columns:  1fr!important;
-  
-        .img_footer{
-            width: 80% !important;
-        }
-    }
-
-
-    
-    .grilla_bloque_2{
-      margin: 0% 2% !important; 
-      grid-template-columns:  1fr!important; 
-    }
-
-
-    .titulo_bloque_2{
-      margin-top: 5%  !important;
+  #movil{
+    display: block !important; 
+    .fondoMascotas{
+      background-image: url('/assets/images/fondo_mascota3.jpg'); 
+      padding-bottom: 50%;
     }
     
-    .grilla_1{
-      display: grid !important;
-      grid-template-columns: repeat(auto-fit, minmax(20rem, auto))!important;
-      grid-gap: 50px !important;
-      text-align: center !important; 
-      grid-auto-rows: auto !important;
-      justify-content: center !important;
+    .ImgMascota{  
+      border-radius: 50%;
+      border: solid 8px white;
+      margin: 25% 0% 5% 0;
+      width: 50%;
     }
-  
-    .info_bloque_1{ 
-      margin: 10% 5% !important;
+    
+    .nameMascota{
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: bold;
     }
+    
+    .nameMascota > h1{
+      font-family: Lucida, Handwriting, Cursive; 
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 35px;
+      color: #7c3a3a;
+      letter-spacing: 0.4rem; 
+      width: 100%;
+    }
+    
+    .infoMascota{ 
+      margin-top: -25%;
+      height: 60vh;
+      border-radius: 50px;
+      border: solid 3px #646068; 
+      background-color: #ffffff;
+      text-emphasis: left; 
+      border-bottom-left-radius: 200px 150px;
+      border-top-right-radius: 200px 150px;
+      border: solid 8px #92bd28; 
+    }
+    
+    .centrar{
+      text-align: center;
+    }
+    
+    .OpcionesMascota{
+      display: grid; 
+      grid-gap: 5%; 
+      padding: 10%;
+    
+      .example-button-container{
+        display: grid; 
+        grid-template-columns: 50px 1fr;
+        align-items: center;
+    
+        span{
+          text-align: left;
+          margin-left: 10%;
+          font-size: 16px;
+          font-weight: bold;
+    
+          a{
+            text-decoration: none;
+          }
+        }  
+      } 
+    
+      button{
+        background: white;
+        color: black;
+      } 
+    }
+    
+
+    mat-card{ 
+      display: block;
+      position: relative;
+      padding: 16px;
+      border-radius: 25px;
+      margin: 5%;
+    }
+
+    .info{
+      display: grid;
+      grid-template-columns: 150px 1fr; 
+      margin: 5%;
+    }
+    
+  }
+
+}
   
-    .img_info_1 {
-      img {
-          width: 80%;
+  
+/** RESPONSIVE - TABLET**///
+@media (min-width : 689px) and (max-width : 992px){ 
+  #movil{
+    display: none !important;
+  }
+ 
+  #pc{
+    display: block !important;
+  }
+ 
+
+  .fondoMascotaspc{
+    .grid-card{
+      display: block !important;
+
+      .foto{
+        padding: 5%;
+        background-color: #e0f6fd;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        justify-content: center;
+        text-align: center; 
+        justify-content: center !important;
+        display: grid;
       }
     }
-
-    .Sub_grilla {
-      margin: 5%  !important;
-    }
-  }
-  
-  
-  /** RESPONSIVE - TABLET**///
-  @media (min-width : 689px) and (max-width : 992px){ 
-   
-    .Sub_grilla{  
-     margin: 0!important;
-    }
-  
-    .Sub_grilla_info{  
-        padding: 10%!important;
-    }
-  
-    .grilla_1{
-      display: grid !important;
-      grid-template-columns: repeat(auto-fit, minmax(20rem, auto)) !important;
-      grid-gap: 50px !important;
-      text-align: center !important;
-      padding: 2% !important;
-    }
-  
-    .grilla_bloque_2{
-      display: grid !important;
-      grid-template-columns: repeat(auto-fit, minmax(30rem, auto)) !important;
-      padding-top: 5% !important;
-    }
-   
-    .menu-large{
-        display: none !important;
-    }
-
-    .footer_bloque_movile{
-      display: none !important;
-    }
-  
-    .menu-medio{
-        display: block  !important;
-    }
-  
-    .grilla_bloque_footer{
-      grid-template-columns: 1fr 150px!important;
-    }
-  
-    .botones-menu-medio,  .flex_movile{
-        display: flex !important;
-    }
-  
-    .bloque_cabecera{
-        display: grid !important;  
-        grid-template-columns: 1fr !important;
-    } 
-  
-    .img_footer{
-        width: 80% !important;
-    }
-   
-    .info_bloque_1{
-      margin: 10% 8% !important;
-    }
-    .info_bloque_2{
-      margin: 2% 18% !important;
-    }
-  }
-  
-  
-  // /** RESPONSIVE - PC**///
-  @media (min-width : 993px) and (max-width : 1440px){  
-  
-    .grilla_bloque_2{
-      display: grid !important;
-      grid-template-columns: 40% 60% !important;
-      padding: 0% !important;
-    }   
-  }
-  
-
-   // /** RESPONSIVE - PANTALLAS GRANDES**///
-   @media (min-width : 1600px){  
-    .grilla_1{
-      grid-template-columns: repeat(auto-fit, minmax(30em, auto)) !important; 
-    }
-
   }
 
+  .boton_agregar{
+    margin-top: 25% !important;
+      button{
+        border-radius: 15px;
+        height: 50px;
+      }
+  }
   
+  .info-card{
+    .bloque_3{ 
+      padding: 5% !important;
+      display: block !important;
+    }
+  }
+}
+
+
+// /** RESPONSIVE - PC**///
+@media (min-width : 993px) and (max-width : 2500px){  
+  #movil{
+    display: none !important;
+  }
+
+  #pc{
+    display: block !important;
+  }
+
+
+}
+
+ 

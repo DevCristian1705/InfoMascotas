@@ -1,80 +1,147 @@
-<div class="centrar">
+<!-- DISEÑO PC -->
+<div class="centrar" id="pc">
+    <div class="fondoMascotaspc">   
+        <mat-card class="card-mascota"> 
+            <div class="grid-card">
+                <div class="foto">
+                    <img src="../assets/images/mascota.png"  class="ImgMascotapc" alt="">
+
+                    <h1> Nombre del perro</h1>
+
+                    <div class="raza">
+                        PITBULL
+                    </div>
+ 
+                    <div class="info-detalle">
+                        <mat-icon>room</mat-icon>
+                        <mat-label> Loma. pero </mat-label>
+
+                        <mat-icon>chat</mat-icon>
+                        <mat-label> cristian@gmail.com </mat-label>
+
+                        <mat-icon>phonelink_ring</mat-icon>
+                        <mat-label> 925550602 </mat-label>
+
+                        <mat-icon>facebook</mat-icon>
+                        <mat-label> Loma. pero </mat-label>
+                    </div>
+
+               
+                    <div class="boton_agregar">
+                        <button mat-raised-button color="primary"> 
+                            <mat-icon>add_circle</mat-icon>
+                            Agregar Contacto
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="info-card">
+                    <div class="content_info_card">
+                        <div class="info_titulo">
+                            <p>Sobre mí</p> 
+                        </div>
+    
+                        <div class="bloque_1">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aspernatur quo ex dignissimos aperiam veniam esse, est voluptates eum a quis aliquam, officiis nesciunt ullam quibusdam earum beatae id mollitia.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae autem qui maxime, ipsa quasi sit fugit doloribus libero distinctio mollitia pariatur veniam, dolorem ullam esse commodi. Assumenda impedit porro placeat.
+                        </div>
+                        
+                        <div class="bloque_2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aspernatur quo ex dignissimos aperiam veniam esse, est voluptates eum a quis aliquam, officiis nesciunt ullam quibusdam earum beatae id mollitia.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ullam sit earum eligendi ipsam repellat blanditiis qui vitae ipsa exercitationem accusamus labore libero placeat eum pariatur, culpa eius aliquam doloremque?
+                        </div>
+    
+                        <div class="info_titulo">
+                            <p>Detalles de la mascota</p> 
+                        </div>
+    
+                        <div class="bloque_3">
+                            <mat-card> 
+                                <div class="info_titulo2">
+                                    <p>Sobre mí</p> 
+                                    Lorem ipsum dolor sit am dantium   aspernatur veniam doloremque quidem, perferendis dolorem odit beatae amet?
+                                </div>
+                            </mat-card>
+    
+                            <mat-card> 
+                                <div class="info_titulo2">
+                                    <p>Sobre mí</p> 
+                                    Lorem ipsum dolor sit am dantium   aspernatur veniam doloremque quidem, perferendis dolorem odit beatae amet?
+                                </div>
+                            </mat-card>
+    
+                            <mat-card> 
+                                <div class="info_titulo2">
+                                    <p>Sobre mí</p> 
+                                    Lorem ipsum dolor sit am dantium   aspernatur veniam doloremque quidem, perferendis dolorem odit beatae amet?
+                                </div>
+                            </mat-card>
+    
+                            <mat-card> 
+                                <div class="info_titulo2">
+                                    <p>Sobre mí</p> 
+                                    Lorem ipsum dolor sit am dantium   aspernatur veniam doloremque quidem, perferendis dolorem odit beatae amet?
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                    
+
+                </div>
+              
+            </div> 
+        </mat-card>
+    </div>
+</div>
+
+<!-- DISEÑO CELULAR -->
+<div class="centrar" id="movil">
     <!-- FONDO CAMBIANTE -->
 
-    <div class="fondoMascotas" data-aos="flip-left"> 
+    <div class="fondoMascotas">  
         <img src="../assets/images/mascota.png"  class="ImgMascota" alt="">
-    </div>
-    
-    
-    <div class="infoMascota">
-        <div class="nameMascota" data-aos="zoom-in">
-            <h1> MAMAINE PELAGIA</h1>
+ 
+        <div>
+            <h1  class="nameMascota"> MAMAINE PELAGIA</h1>
         </div>
         
         <div class="OpcionesMascota">
-            <div class="example-button-container" data-aos="fade-up">
+            <div class="example-button-container" >
                 <button mat-fab aria-label="Example icon button with a delete icon">
                 <mat-icon>settings_phone</mat-icon>
                 </button>
+                <span> <a href="#div1">Mi numero de contacto</a>  </span>
             </div>
-            <div class="example-button-container" data-aos="fade-down">
+            <div class="example-button-container">
                 <button mat-fab  aria-label="Example icon button with a bookmark icon">
                 <mat-icon>message</mat-icon>
                 </button>
+                <span> <a href="#div2"> Mi informacion</a>  </span>
             </div>
-            <div class="example-button-container" data-aos="fade-up">
+            <div class="example-button-container" >
                 <button mat-fab  aria-label="Example icon button with a home icon">
                 <mat-icon>account_circle</mat-icon>
                 </button>
+                <span> <a href="#div3">Mi dueño</a>  </span>
             </div>
-            <div class="example-button-container" data-aos="fade-down"> 
+            <div class="example-button-container" > 
                 <button mat-fab aria-label="Example icon button with a heart icon">
                 <mat-icon>location_on</mat-icon>
                 </button>
+                <span> <a href="#div3">  Como llegar a mi hogar</a> </span>
             </div>
-        </div>
+        </div>  
+        
+        <mat-card> 
+            <div class="info">
+                <strong>  Numero Celular : </strong> 
+                <p> 934560280 </p>  
 
-            
-        <div class="DatosMascota" >
-
-            <p class="ribbon" data-aos="fade-left">
-                <span class="text"><strong class="bold">
-                    Mis datos: <br>
-                    <div class="infoRibbon">
-                        <span> Soy un perro Rot Guaitler</span>
-                        <br>
-                        <span> Asesino de pitbull </span>
-                    </div>
-                 
-                </strong></span>
-            </p>
-
-            <p class="ribbon" data-aos="fade-right">
-                <span class="text"><strong class="bold">
-                    Mi Dueño: <br>
-                    <div class="infoRibbon">
-                        <span> Jesus Ormeño yatacp</span>
-                        <br>
-                        <span> dni 840949</span>
-                    </div>
-                  
-                </strong></span>
-            </p>
-
-            <p class="ribbon" data-aos="fade-left">
-                <span class="text"><strong class="bold">
-                    Mi Ubicación: <br> 
-                    <div class="infoRibbon">
-                        <span> Calle San luis Chincha</span>
-                        <br>
-                        <span> Urbanizacion Los guagua</span>
-                    </div>
-                </strong></span>
-            </p>
- 
-        </div>
-
-
-
+                <strong>  Operador  : </strong> 
+                <p> ENTEL </p>   
+            </div>
+        </mat-card>
     </div>
+  
 </div>
