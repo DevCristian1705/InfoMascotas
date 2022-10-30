@@ -36,7 +36,7 @@
 .example-headers-align{
     mat-expansion-panel{
         margin: 2% 0;
-    }
+    } 
 }
  
 
@@ -44,6 +44,23 @@
     display: grid;
     grid-template-columns:  1fr 1fr 1fr;
     gap: 0 5%;
+    overflow: auto;
+
+
+    .campos_info::-webkit-scrollbar-thumb:hover {
+        background-color: #5749d2;
+      }
+      
+      /* New Syntax */
+      .campos_info {
+        scrollbar-color: #d4aa70 #e4e4e4;
+        transition: scrollbar-color 0.3s ease-out;
+      }
+      
+      .campos_info:hover {
+        scrollbar-color: #5749d2;
+      }
+
 }
  
  

@@ -78,7 +78,7 @@
   
         .detalles_bloque_2{
           display: grid;
-          grid-template-columns: 40% 60%;
+          grid-template-columns: 45% 55%;
           text-align: left;
           margin: 3%;
         }
@@ -140,8 +140,7 @@
   }
 
   .campos_info{ 
-    grid-template-columns:  1fr  1fr !important;
-    gap: 2% !important;
+    grid-template-columns:  1fr  1fr !important; 
   }
 
 

@@ -4,33 +4,29 @@
       
         <div class="grid-card">
             <div class="foto">
-                <img src="../assets/images/mascota.png"  class="ImgMascotapc" alt="">
-
-                <h1> Nombre del perro</h1>
+                <img [src]="imagePath"  class="ImgMascotapc" alt=""> 
+                <h1>  {{ datosMascotaLocal.nombreMascota  | uppercase }} </h1>
 
                 <div class="raza">
-                    PITBULL
+                    {{ datosMascotaLocal.raza | uppercase }}
                 </div>
 
                 <div class="info-detalle">
                     <mat-icon>room</mat-icon>
-                    <mat-label> Loma. pero </mat-label>
+                    <mat-label>  {{ datosMascotaLocal.direccion }} </mat-label>
 
                     <mat-icon>chat</mat-icon>
-                    <mat-label> cristian@gmail.com </mat-label>
+                    <mat-label> {{ datosMascotaLocal.email }} </mat-label>
 
                     <mat-icon>phonelink_ring</mat-icon>
-                    <mat-label> 925550602 </mat-label>
-<!-- 
-                    <mat-icon>facebook</mat-icon>
-                    <mat-label> Loma. pero </mat-label> -->
+                    <mat-label> {{ datosMascotaLocal.celular }} </mat-label> 
                 </div>
 
             
                 <div class="boton_agregar">
                     <button mat-raised-button color="primary" (click)="onRegistrarDatos()"> 
                         <mat-icon>add_circle</mat-icon>
-                        Agregar Contacto
+                        Registrar Información
                     </button>
                 </div>
 
@@ -131,10 +127,10 @@
 
              <div class="detalles_bloque_2">
                 <strong> Celular : </strong>   
-                <p> 48048415610  </p>   
+                <p> {{ datosMascotaLocal.celular }}  </p>   
             
-                <strong> Direccion : </strong>   
-                <p> Av Progreso 18508 San isdro  </p>  
+                <strong> Dirección : </strong>   
+                <p> {{ datosMascotaLocal.direccion }}  </p>  
              </div>
         </div>
 
@@ -148,17 +144,17 @@
             </div>
 
              <div class="detalles_bloque_2">
-                <strong> Especio : </strong>   
-                <p> Perro  </p>   
+                <strong> Especie : </strong>   
+                <p>  {{ datosMascotaLocal.especie | uppercase }}   </p>   
             
                 <strong> Raza : </strong>   
-                <p> Mestizo </p>  
+                <p> {{ datosMascotaLocal.raza | uppercase }} </p>  
 
                 <strong> Sexo : </strong>   
-                <p> Hembra  </p>   
+                <p> {{ datosMascotaLocal.sexo | uppercase}}  </p>   
             
                 <strong> Fecha Nacimiento : </strong>   
-                <p>  09 Julio 2022  </p>  
+                <p>  {{ datosMascotaLocal.fechaNacimiento  | date:'dd-MM-yyyy'}} </p>  
    
              </div>
 
@@ -170,21 +166,45 @@
             </div>
 
              <div class="detalles_bloque_2">
+
+                <strong> Cara : </strong>   
+                <p> {{ datosMascotaLocal.c_cara }}  </p>   
+            
+                <strong> Nariz : </strong>   
+                <p> {{ datosMascotaLocal.c_nariz }}  </p>  
+
+                <strong> Orejas : </strong>   
+                <p> {{ datosMascotaLocal.c_oreja }}  </p>   
+
                 <strong> Mandibula Inferior : </strong>   
-                <p> Blanco  </p>   
+                <p> {{ datosMascotaLocal.c_mandibula_inferior }}  </p>   
             
+                <strong> Mandibula Superior : </strong>   
+                <p> {{ datosMascotaLocal.c_mandibula_superior }}  </p>  
+
                 <strong> Pecho : </strong>   
-                <p> Blanco  </p>  
-
-                <strong> Patas : </strong>   
-                <p> Blanco  </p>   
+                <p> {{ datosMascotaLocal.c_pecho }}  </p>   
             
-                <strong> Carda : </strong>   
-                <p>  marrón  </p>  
+                <strong> Esplada: </strong>   
+                <p>  {{ datosMascotaLocal.c_espalda }}   </p>  
 
-                <strong> Esplada : </strong>   
-                <p>  Negra  </p>  
-   
+                <strong> Pata Delantera Derecha : </strong>   
+                <p>  {{ datosMascotaLocal.c_pata_delantera_derecha }}   </p>  
+                
+                <strong> Pata Delantera Izquierda : </strong>   
+                <p> {{ datosMascotaLocal.c_pata_delantera_izquierda }}   </p>   
+            
+                <strong> Pata Trasera Derecha : </strong>   
+                <p> {{ datosMascotaLocal.c_pata_trasera_derecha }}   </p>  
+
+                <strong>  Pata Trasera Izquierda : </strong>   
+                <p> {{ datosMascotaLocal.c_pata_trasera_izquierda }}   </p>   
+            
+                <strong> Cola : </strong>   
+                <p>  {{ datosMascotaLocal.c_cola }}   </p>  
+
+                <strong> Ojos : </strong>   
+                <p>  {{ datosMascotaLocal.c_ojos }}   </p>   
              </div>
         </div>
 
