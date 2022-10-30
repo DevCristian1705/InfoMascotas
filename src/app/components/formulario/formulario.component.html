@@ -1,0 +1,223 @@
+<div class="contentForm">
+    <div class="divForm">
+        <h2> DATOS DE MI MASCOTA</h2>
+        <form [formGroup]="Form" >
+
+            <mat-accordion class="example-headers-align" multi>
+                
+                <mat-expansion-panel [expanded]="0"  > 
+                  <mat-expansion-panel-header>
+                    <div class="datosAcordion">
+                        <mat-icon>pets</mat-icon>
+                        <p>  Información Principal</p>
+                    </div> 
+                  </mat-expansion-panel-header>
+
+                  <!-- CONTENIDO ACORDION -->
+
+                  <div class="campos_info">
+                    <mat-form-field class="example-full-width"  appearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                
+                    <mat-form-field class="example-full-width"  appearance="fill">
+                        <mat-label>Especie</mat-label>
+                        <mat-select>
+                            <mat-option value="hembra">PERRO</mat-option>
+                            <mat-option value="macho">GATO</mat-option> 
+                            <mat-option value="hembra">HANSTER</mat-option>
+                            <mat-option value="macho">GALLO</mat-option> 
+                            <mat-option value="hembra">POLLO</mat-option>
+                            <mat-option value="macho">CERDO</mat-option> 
+                        </mat-select>
+                    </mat-form-field>
+                    
+                    <mat-form-field class="example-full-width"  appearance="fill"> 
+                        <mat-label>Raza</mat-label>
+                        <input matInput> 
+                    </mat-form-field>
+                    
+                    <mat-form-field class="example-full-width"  appearance="fill">
+                        <mat-label>Sexo</mat-label>
+                        <mat-select>
+                            <mat-option value="hembra">HEMBRA</mat-option>
+                            <mat-option value="macho">MACHO</mat-option> 
+                        </mat-select>
+                    </mat-form-field>
+             
+                    <mat-form-field class="example-full-width"  appearance="fill">
+                        <mat-label>Fecha Nacimiento</mat-label> 
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker> 
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width"  appearance="fill">
+                        <mat-label>Celular</mat-label>
+                        <span matPrefix>+51 &nbsp;</span>
+                        <input   maxlength="9" matInput placeholder="935 562 582"   (keypress)="onSoloNumeros($event)">
+                    </mat-form-field>
+                
+                    <mat-form-field class="example-full-width"  appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                </div>
+                 <!-- CONTENIDO ACORDION -->
+                </mat-expansion-panel>
+
+
+                <!-- <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <div class="datosAcordion">
+                        <mat-icon>local_hospital</mat-icon>
+                        <p>  Información Médica</p>
+                    </div>  
+                  </mat-expansion-panel-header>
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>Date</mat-label>
+                    <input matInput type="number" min="1">
+                  </mat-form-field>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-expansion-panel>
+ -->
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <div class="datosAcordion">
+                          <mat-icon>palette</mat-icon>
+                          <p> Mis Colores de Piel</p>
+                      </div>  
+                    </mat-expansion-panel-header>
+  
+                    <div class="campos_info">
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Cara</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Nariz</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Orejas</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Mandibula Inferior</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Mandibula Superior</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label> Pecho</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Esplada</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                     
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Pata Delantera Derecha</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Pata Delantera Izquierda</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                      
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Pata Trasera Derecha</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Pata Trasera Izquierda</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label> Cola</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                     
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label> Ojos </mat-label>
+                            <input matInput>
+                        </mat-form-field>
+
+                    </div>
+                  </mat-expansion-panel>
+
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <div class="datosAcordion">
+                            <mat-icon>room</mat-icon>
+                            <p> Mi Dirección</p>
+                        </div>  
+                    </mat-expansion-panel-header>
+
+                    <mat-form-field appearance="fill" style="display: grid;">
+                      <mat-label>Dirección</mat-label>
+                      <input matInput >
+                    </mat-form-field>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-expansion-panel>
+
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header> 
+                        <div class="datosAcordion">
+                            <mat-icon>insert_photo</mat-icon>
+                            <p> Mi Foto </p>
+                        </div>   
+                    </mat-expansion-panel-header>
+
+                    <div> 
+                        <button mat-flat-button 
+                        [color]="!selectedFileNames ? 'primary' : 'warn'"
+                        (click)="fileAdjuntar.click()">
+                        <mat-icon> {{ (!selectedFileNames) ?  'file_upload' :  'refresh' }} </mat-icon>
+                            {{ (!selectedFileNames) ?  ' Elegir Foto' :  'Cambiar Foto' }}
+                        </button> 
+
+                        <input class="btnAdjuntar" type="file" id="fileInput" name="fileInput"
+                        accept="image/*" multiple (change)="selectFiles($event)" #fileAdjuntar/>
+ 
+                    </div>
+
+
+                    <div *ngIf="ImgAdjunto">
+                        <img [src]="ImgAdjunto" class="preview">
+                        &nbsp; 
+                        <span *ngIf="selectedFileNames">  <strong> Foto : </strong> {{selectedFileNames}}  </span>
+                    </div>
+
+                </mat-expansion-panel>
+
+            </mat-accordion>
+
+
+            <div class="botones">
+                <button mat-raised-button color="primary">Guardar Datos</button>
+                <button mat-raised-button color="warn">Volver</button>
+            </div>
+     
+        </form>
+
+    </div>
+</div>
