@@ -86,6 +86,13 @@
 
   }
 
+
+  .campos_info{ 
+    grid-template-columns:  1fr !important;
+    gap: 0% !important;
+  }
+
+
 }
   
   
@@ -131,6 +138,14 @@
       display: block !important;
     }
   }
+
+  .campos_info{ 
+    grid-template-columns:  1fr  1fr !important;
+    gap: 2% !important;
+  }
+
+
+
 }
 
 

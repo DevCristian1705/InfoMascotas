@@ -29,4 +29,8 @@ export class LandingComponent implements OnInit {
   onLogin(){
     this.router.navigate(['/auth'])
   }
+
+  onRegistrarDatos(){
+    this.router.navigate(['/components/form'])
+  }
 }

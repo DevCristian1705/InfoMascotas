@@ -21,6 +21,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [],
@@ -48,7 +51,9 @@ import {MatCardModule} from '@angular/material/card';
     MatProgressSpinnerModule,
     MatCheckboxModule,
     MatCardModule,
-    
+    MatTabsModule,
+    MatExpansionModule,
+    MatToolbarModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'es-ES' }]
 })
