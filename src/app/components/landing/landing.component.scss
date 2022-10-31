@@ -15,6 +15,9 @@
 
         h1{
           margin-top: 5%;
+          margin-top: 5%;
+          font-weight: bold;
+          font-size: 35px;
         }
       }
 
@@ -93,11 +96,19 @@
   }
 }
 
-.boton_agregar{
-  margin-top: 10%;
-    button{
-      border-radius: 15px;
-      height: 50px;
-    }
-}
 
+.botones_pcr{
+  display: flex;
+  gap: 2%;
+ 
+  .boton_agregar{
+    border-radius: 10px;
+    height: 50px;
+    background: chocolate;
+  }
+  .boton_wtpr{ 
+    height: 50px;
+    background: rgb(121, 80, 50);
+    border-radius: 10px;
+  }
+}

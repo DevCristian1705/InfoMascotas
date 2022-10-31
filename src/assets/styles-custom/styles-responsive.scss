@@ -19,14 +19,24 @@
         width: 50%;
       }
             
-      .nameMascota{ 
+      .nameMascota{   
+        border-radius: 50px;
+        background-color: #31623a;
+        padding: 3%;
+        color: white;
         font-weight: bold;
-        font-size: 35px;  
+        font-size: 30px;
+        margin: 4% 15%;
       }
     
-      .razamovil{
+      .razamovil{ 
+        border-radius: 50px;
+        background-color: #858585;
+        padding: 2%;
+        color: white;
         font-weight: bold;
-        font-size: 30px;  
+        font-size: 20px;
+        margin: 2% 15%;
       }
       
       .OpcionesMascota{ 
@@ -92,6 +102,9 @@
     gap: 0% !important;
   }
 
+  .icon_wtp{
+    margin: -8px 8%;
+  }
 
 }
   
@@ -124,12 +137,20 @@
     }
   }
 
-  .boton_agregar{
-    margin-top: 25% !important;
-      button{
-        border-radius: 15px;
-        height: 50px;
-      }
+  .botones_pcr{
+    display: grid  !important;
+    gap: 10%  !important;
+
+    .boton_agregar{
+      border-radius: 10px;
+      height: 50px;
+      background: chocolate;
+    }
+    .boton_wtpr{ 
+      height: 50px;
+      background: rgb(121, 80, 50);
+      border-radius: 10px;
+    }
   }
   
   .info-card{

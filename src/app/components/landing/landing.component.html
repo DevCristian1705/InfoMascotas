@@ -4,7 +4,7 @@
       
         <div class="grid-card">
             <div class="foto">
-                <img [src]="imagePath"  class="ImgMascotapc" alt=""> 
+                <img [src]="datosMascotaLocal.foto_mascota"  class="ImgMascotapc" alt=""> 
                 <h1>  {{ datosMascotaLocal.nombreMascota  | uppercase }} </h1>
 
                 <div class="raza">
@@ -23,10 +23,15 @@
                 </div>
 
             
-                <div class="boton_agregar">
-                    <button mat-raised-button color="primary" (click)="onRegistrarDatos()"> 
-                        <mat-icon>add_circle</mat-icon>
-                        Registrar Información
+                <div class="botones_pcr">
+                    <button class="boton_agregar"  mat-raised-button color="primary" (click)="onRegistrarDatos()"> 
+                        <mat-icon>assignment</mat-icon>
+                        Editar Información
+                    </button>
+
+                    <button class="boton_wtpr" mat-raised-button color="primary" (click)="onSendWathsapp()">  
+                        <img src="../assets/images/icon_wtp.png" height="20px" alt=""> &nbsp; 
+                        Contáctame
                     </button>
                 </div>
 
@@ -39,13 +44,11 @@
                     </div>
 
                     <div class="bloque_1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aspernatur quo ex dignissimos aperiam veniam esse, est voluptates eum a quis aliquam, officiis nesciunt ullam quibusdam earum beatae id mollitia.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae autem qui maxime, ipsa quasi sit fugit doloribus libero distinctio mollitia pariatur veniam, dolorem ullam esse commodi. Assumenda impedit porro placeat.
+                        {{ datosMascotaLocal.sobremi_1 }}
                     </div>
                     
                     <div class="bloque_2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aspernatur quo ex dignissimos aperiam veniam esse, est voluptates eum a quis aliquam, officiis nesciunt ullam quibusdam earum beatae id mollitia.
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ullam sit earum eligendi ipsam repellat blanditiis qui vitae ipsa exercitationem accusamus labore libero placeat eum pariatur, culpa eius aliquam doloremque?
+                        {{ datosMascotaLocal.sobremi_2 }}
                     </div>
 
                     <div class="info_titulo">
@@ -55,29 +58,29 @@
                     <div class="bloque_3">
                         <mat-card> 
                             <div class="info_titulo2">
-                                <p>Sobre mí</p> 
-                                Lorem ipsum dolor sit am dantium   aspernatur veniam doloremque quidem, perferendis dolorem odit beatae amet?
+                                <p>Vacunas</p> 
+                                {{ datosMascotaLocal.vacunas }}
                             </div>
                         </mat-card>
 
                         <mat-card> 
                             <div class="info_titulo2">
-                                <p>Sobre mí</p> 
-                                Lorem ipsum dolor sit am dantium   aspernatur veniam doloremque quidem, perferendis dolorem odit beatae amet?
+                                <p>Juegetes Favoritos</p> 
+                                {{ datosMascotaLocal.juguetes }}
                             </div>
                         </mat-card>
 
                         <mat-card> 
                             <div class="info_titulo2">
-                                <p>Sobre mí</p> 
-                                Lorem ipsum dolor sit am dantium   aspernatur veniam doloremque quidem, perferendis dolorem odit beatae amet?
+                                <p>Comida Favorita</p> 
+                                {{ datosMascotaLocal.comida }}
                             </div>
                         </mat-card>
 
                         <mat-card> 
                             <div class="info_titulo2">
-                                <p>Sobre mí</p> 
-                                Lorem ipsum dolor sit am dantium   aspernatur veniam doloremque quidem, perferendis dolorem odit beatae amet?
+                                <p>Lugar Favorito</p> 
+                                {{ datosMascotaLocal.lugar_paseo }}
                             </div>
                         </mat-card>
                     </div>
@@ -95,29 +98,33 @@
     <div class="fondoMascotas">  
         <img src="../assets/images/mascota.png"  class="ImgMascota" alt=""> 
        
-        <h1  class="nameMascota"> MAMAINE PELAGIA</h1> 
-        <p class="razamovil"> Pitbull </p>  
+        <h1  class="nameMascota"> {{ datosMascotaLocal.nombreMascota | uppercase }} </h1> 
+        <p class="razamovil"> {{ datosMascotaLocal.raza | uppercase }}  </p>  
 
         <div class="OpcionesMascota"> 
-            <button mat-fab >
-                <mat-icon>settings_phone</mat-icon>
+            <button mat-fab>
+                <mat-icon> <a href="#divInformacion">settings_phone </a> </mat-icon>
             </button> 
-            <button mat-fab   >
-                <mat-icon>message</mat-icon>
+            <button mat-fab (click)="onSendWathsapp()">
+                <!-- <mat-icon>message</mat-icon> -->
+                <img src="../assets/images/icon_wtp.png" height="40px"  class="icon_wtp" alt=""> &nbsp; 
             </button>  
-            <button mat-fab  >
-                <mat-icon>account_circle</mat-icon>
+            <button mat-fab>
+                <mat-icon>  <a href="#divMasInformacion">info </a></mat-icon>
+            </button>  
+            <button mat-fab (click)="onRegistrarDatos()">
+                <mat-icon>my_library_books</mat-icon>
             </button>  
         </div>  
         
         
         <div class="info_bloque_1">
             <p class="titulo_bloque_1"> Sobre Mi</p>  
-            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti temporibus porro, cupiditate eum deserunt officiis distinctio veritatis quos aliquid sunt et. Quam at ipsam voluptatum, iusto aspernatur sed commodi alias! </p>   
+            <p>  {{ datosMascotaLocal.sobremi_1 }} <br>  {{ datosMascotaLocal.sobremi_2 }}  </p>   
         </div>
         
 
-        <div class="info_bloque_2">
+        <div class="info_bloque_2" id="divInformacion">
             <div class="titulo_bloque_2">
                 <button mat-mini-fab >
                     <mat-icon>settings_phone</mat-icon>
@@ -135,7 +142,7 @@
         </div>
 
 
-        <div class="info_bloque_2">
+        <div class="info_bloque_2"  id="divMasInformacion">
             <div class="titulo_bloque_2">
                 <button mat-mini-fab >
                     <mat-icon>add_box</mat-icon>
@@ -206,6 +213,40 @@
                 <strong> Ojos : </strong>   
                 <p>  {{ datosMascotaLocal.c_ojos }}   </p>   
              </div>
+
+
+             <div class="titulo_bloque_2">
+                <button mat-mini-fab >
+                    <mat-icon>local_hospital</mat-icon>
+                </button> 
+                <p> Información local_hospital</p>  
+            </div>
+
+             <div class="detalles_bloque_2">
+                <strong> Vacunas : </strong>   
+                <p>  {{ datosMascotaLocal.vacunas }}   </p>    
+             </div>
+
+
+             <div class="titulo_bloque_2">
+                <button mat-mini-fab >
+                    <mat-icon>favorite</mat-icon>
+                </button> 
+                <p> Preferencias</p>  
+            </div>
+
+             <div class="detalles_bloque_2">
+                <strong> Jugete Favorito: </strong>   
+                <p>  {{ datosMascotaLocal.juguetes }}   </p>   
+                
+                <strong> Comida Favorita: </strong>   
+                <p>  {{ datosMascotaLocal.comida }}   </p>   
+
+                <strong> Lugar Favorito: </strong>   
+                <p>  {{ datosMascotaLocal.lugar_paseo }}   </p>  
+ 
+             </div>
+
         </div>
 
 

@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import * as AOS from 'aos';
 import { IDatosMascota } from '../formulario/interface/form.interface';
-import { FormService } from '../formulario/service/form.service';
 
 @Component({
   selector: 'app-landing',
@@ -19,7 +17,7 @@ export class LandingComponent implements OnInit {
 
   constructor(
     private router : Router,
-    private _sanitizer: DomSanitizer
+//    private _sanitizer: DomSanitizer
   ) { 
     
   }
@@ -29,7 +27,7 @@ export class LandingComponent implements OnInit {
       duration : 1000
     });
     this.datosMascotaLocal = JSON.parse(localStorage.getItem('dato_mascota')!);    
-    this.imagePath = this._sanitizer.bypassSecurityTrustResourceUrl(this.datosMascotaLocal.foto_mascota);
+  //
   } 
 
   onLista(){
@@ -43,4 +41,13 @@ export class LandingComponent implements OnInit {
   onRegistrarDatos(){
     this.router.navigate(['/components/form'])
   }
+
+  onSendWathsapp(){
+    let url ="whatsapp://send?text="+encodeURIComponent('Hola tengo informacion sobre su mascota')+"&phone="+encodeURIComponent(934560280)
+    window.open(url);
+  }
+
+
+  
+
 }

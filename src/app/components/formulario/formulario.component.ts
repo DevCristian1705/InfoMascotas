@@ -1,4 +1,3 @@
-import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -21,6 +20,8 @@ export class FormularioComponent implements OnInit {
   ImgAdjunto : any = null;
   imageInfos?: Observable<any>;
   datosMascotaLocal! : IDatosMascota;
+
+  changeImage : boolean = false;
 
   constructor(
     public apiService: FormService, 
@@ -56,6 +57,12 @@ export class FormularioComponent implements OnInit {
       /*MAS DATOS */
       direccion : new FormControl(null, Validators.required),
       foto_mascota : new FormControl(null),
+      sobremi_1 : new FormControl(null),
+      sobremi_2 : new FormControl(null),
+      vacunas : new FormControl(null),
+      juguetes : new FormControl(null),
+      comida : new FormControl(null),
+      lugar_paseo : new FormControl(null),
     })
   }
 
@@ -68,30 +75,7 @@ export class FormularioComponent implements OnInit {
     this.datosMascotaLocal = JSON.parse(localStorage.getItem('dato_mascota')!);    
     if(this.datosMascotaLocal){
       this.ImgAdjunto =  this._sanitizer.bypassSecurityTrustResourceUrl(this.datosMascotaLocal.foto_mascota);
-      this.selectedFileNames = 'Imagen de la Mascota'
-      this.Form.patchValue({
-        nombreMascota : this.datosMascotaLocal.nombreMascota,
-        especie : this.datosMascotaLocal.especie,
-        raza : this.datosMascotaLocal.raza,
-        sexo : this.datosMascotaLocal.sexo,
-        fechaNacimiento : this.datosMascotaLocal.fechaNacimiento,
-        celular : this.datosMascotaLocal.celular,
-        email : this.datosMascotaLocal.email,
-        c_cara : this.datosMascotaLocal.c_cara,
-        c_nariz : this.datosMascotaLocal.c_nariz,
-        c_oreja : this.datosMascotaLocal.c_oreja,
-        c_mandibula_inferior : this.datosMascotaLocal.c_mandibula_inferior,
-        c_mandibula_superior : this.datosMascotaLocal.c_mandibula_superior,
-        c_pecho : this.datosMascotaLocal.c_pecho,
-        c_espalda : this.datosMascotaLocal.c_espalda,
-        c_pata_delantera_derecha : this.datosMascotaLocal.c_pata_delantera_derecha, 
-        c_pata_delantera_izquierda : this.datosMascotaLocal.c_pata_delantera_izquierda,
-        c_pata_trasera_derecha : this.datosMascotaLocal.c_pata_trasera_derecha,
-        c_pata_trasera_izquierda : this.datosMascotaLocal.c_pata_trasera_izquierda,
-        c_cola : this.datosMascotaLocal.c_cola,
-        c_ojos : this.datosMascotaLocal.c_ojos, 
-        direccion : this.datosMascotaLocal.direccion,  
-      })
+      this.Form.patchValue(this.datosMascotaLocal);
     }
   }
 
@@ -101,6 +85,7 @@ export class FormularioComponent implements OnInit {
   selectFiles(event: any): void {  
     if (event.target.files[0]){  
       this.deleteImage();
+      this.changeImage = true;
       const reader = new FileReader(); 
       reader.onload = (e: any) => { 
         this.ImgAdjunto = e.target.result
@@ -134,10 +119,9 @@ export class FormularioComponent implements OnInit {
   }
 
   onSave(){
-    const newDatos : IDatosMascota = this.Form.getRawValue();
-    newDatos.foto_mascota =  this.ImgAdjunto
+    const newDatos : IDatosMascota = this.Form.getRawValue(); 
+    newDatos.foto_mascota =   this.changeImage ? this.ImgAdjunto :  this.datosMascotaLocal.foto_mascota;   
     console.log('newDatos',newDatos);
-    this.Form.disable();
     this.apiService.addDato(newDatos);
 
     this.router.navigate(['/components'])

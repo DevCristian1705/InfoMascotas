@@ -68,22 +68,70 @@
                  <!-- CONTENIDO ACORDION -->
                 </mat-expansion-panel>
 
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <div class="datosAcordion">
+                          <mat-icon>turned_in</mat-icon>
+                          <p> Sobre Mi</p>
+                      </div>  
+                    </mat-expansion-panel-header>
+  
+                    <div style="display: grid;">
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Descripción</mat-label>
+                            <input matInput formControlName="sobremi_1">
+                        </mat-form-field> 
 
-                <!-- <mat-expansion-panel>
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Detalles</mat-label>
+                            <input matInput formControlName="sobremi_2">
+                        </mat-form-field>  
+                    </div>  
+                </mat-expansion-panel>
+
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <div class="datosAcordion">
+                          <mat-icon>favorite</mat-icon>
+                          <p>Preferencias</p>
+                      </div>  
+                    </mat-expansion-panel-header>
+  
+                 
+                    <div class="campos_info">
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Juegete</mat-label>
+                            <input matInput formControlName="juguetes">
+                        </mat-form-field> 
+
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Comida</mat-label>
+                            <input matInput formControlName="comida">
+                        </mat-form-field>  
+
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Lugar de Paseo</mat-label>
+                            <input matInput formControlName="lugar_paseo">
+                        </mat-form-field>  
+                    </div>
+                  </mat-expansion-panel>
+
+
+
+                <mat-expansion-panel>
                   <mat-expansion-panel-header>
                     <div class="datosAcordion">
                         <mat-icon>local_hospital</mat-icon>
-                        <p>  Información Médica</p>
+                        <p>  Información local_hospital</p>
                     </div>  
                   </mat-expansion-panel-header>
 
-                  <mat-form-field appearance="fill">
-                    <mat-label>Date</mat-label>
-                    <input matInput type="number" min="1">
-                  </mat-form-field>
-                  <mat-datepicker #picker></mat-datepicker>
+                  <mat-form-field appearance="fill"  style="display: grid;">
+                    <mat-label>Vacunas</mat-label>
+                    <input matInput formControlName="vacunas">
+                  </mat-form-field> 
                 </mat-expansion-panel>
- -->
+
 
                 <mat-expansion-panel>
                     <mat-expansion-panel-header>
@@ -160,7 +208,7 @@
                         </mat-form-field>
 
                     </div>
-                  </mat-expansion-panel>
+                </mat-expansion-panel>
 
 
                 <mat-expansion-panel>
@@ -188,10 +236,10 @@
 
                     <div> 
                         <button mat-flat-button 
-                        [color]="!selectedFileNames ? 'primary' : 'warn'"
+                        [color]="!datosMascotaLocal ? 'accent' : 'warn'"
                         (click)="fileAdjuntar.click()">
-                        <mat-icon> {{ (!selectedFileNames) ?  'file_upload' :  'refresh' }} </mat-icon>
-                            {{ (!selectedFileNames) ?  ' Elegir Foto' :  'Cambiar Foto' }}
+                        <mat-icon> {{ (!datosMascotaLocal) ?  'file_upload' :  'refresh' }} </mat-icon>
+                            {{ (!datosMascotaLocal) ?  ' Elegir Foto' :  'Cambiar Foto' }}
                         </button> 
 
                         <input class="btnAdjuntar" type="file" id="fileInput" name="fileInput"
@@ -215,13 +263,11 @@
                 <div>
                     <button mat-raised-button color="primary" [disabled]="!Form.valid || !ImgAdjunto" class="btn_guardar_post" (click)="onSave()">   
                         <mat-icon>save</mat-icon>
-                       {{ !Form.disabled ? ( datosMascotaLocal ? 'Guardar Datos' : 'Editar Datos') : 'GUARDANDO....' }} 
+                       {{ !datosMascotaLocal ? 'Guardar Datos' : 'Editar Datos' }} 
                     </button> 
-                    <mat-progress-spinner *ngIf="Form.disabled" [diameter]="24" [mode]="'indeterminate'"> 
-                    </mat-progress-spinner>  
+                    <button mat-raised-button color="warn" (click)="onVolver()">Volver</button>
                 </div>
  
-                <button mat-raised-button color="warn" (click)="onVolver()">Volver</button>
             </div>
      
         </form>

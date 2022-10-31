@@ -21,4 +21,11 @@ export interface IDatosMascota{
     c_ojos  :string,
     direccion :string,
     foto_mascota :string,
+
+    sobremi_1 :string,
+    sobremi_2 :string,
+    vacunas :string,
+    juguetes :string,
+    comida :string,
+    lugar_paseo :string,
 }
