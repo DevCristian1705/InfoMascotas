@@ -96,7 +96,7 @@
     <!-- FONDO CAMBIANTE -->
 
     <div class="fondoMascotas">  
-        <img src="../assets/images/mascota.png"  class="ImgMascota" alt=""> 
+        <img [src]="datosMascotaLocal.foto_mascota"  class="ImgMascota" alt=""> 
        
         <h1  class="nameMascota"> {{ datosMascotaLocal.nombreMascota | uppercase }} </h1> 
         <p class="razamovil"> {{ datosMascotaLocal.raza | uppercase }}  </p>  
