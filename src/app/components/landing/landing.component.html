@@ -1,5 +1,5 @@
 <!-- DISEÑO PC -->
-<div class="centrar" id="pc">
+<!-- <div class="centrar" id="pc">
     <div class="fondoMascotaspc">   
       
         <div class="grid-card">
@@ -8,7 +8,7 @@
                 <h1>  {{ datosMascotaLocal.nombreMascota  | uppercase }} </h1>
 
                 <div class="raza">
-                    {{ datosMascotaLocal.raza | uppercase }}
+                   Raza:  {{ datosMascotaLocal.raza | uppercase }}
                 </div>
 
                 <div class="info-detalle">
@@ -89,42 +89,63 @@
         </div> 
     
     </div>
-</div>
+</div> -->
 
 <!-- DISEÑO CELULAR -->
 <div class="centrar" id="movil">
     <!-- FONDO CAMBIANTE -->
 
     <div class="fondoMascotas">  
-        <img [src]="datosMascotaLocal.foto_mascota"  class="ImgMascota" alt=""> 
-       
-        <h1  class="nameMascota"> {{ datosMascotaLocal.nombreMascota | uppercase }} </h1> 
-        <p class="razamovil"> {{ datosMascotaLocal.raza | uppercase }}  </p>  
+        <!-- <img [src]="datosMascotaLocal.foto_mascota"  class="ImgMascota" alt="">  -->
+        <!-- <h1  class="nameMascota"> {{ datosMascotaLocal.nombreMascota | uppercase }} </h1> 
+        <p class="razamovil"> Raza:  {{ datosMascotaLocal.raza | uppercase }}  </p>   -->
+
+        <img [src]="imgPocho"  class="ImgMascota" alt=""> 
+        <h1  class="nameMascota"> MAMAINE  </h1> 
+        <p class="razamovil"> Raza:  MESTIZA  </p>  
+
 
         <div class="OpcionesMascota"> 
             <button mat-fab>
                 <mat-icon> <a href="#divInformacion">settings_phone </a> </mat-icon>
             </button> 
             <button mat-fab (click)="onSendWathsapp()">
-                <!-- <mat-icon>message</mat-icon> -->
                 <img src="../assets/images/icon_wtp.png" height="40px"  class="icon_wtp" alt=""> &nbsp; 
             </button>  
             <button mat-fab>
                 <mat-icon>  <a href="#divMasInformacion">info </a></mat-icon>
             </button>  
-            <button mat-fab (click)="onRegistrarDatos()">
+            <!-- <button mat-fab (click)="onRegistrarDatos()">
                 <mat-icon>my_library_books</mat-icon>
-            </button>  
+            </button>   -->
         </div>  
         
-        
+<!--         
         <div class="info_bloque_1">
             <p class="titulo_bloque_1"> Sobre Mi</p>  
             <p>  {{ datosMascotaLocal.sobremi_1 }} <br>  {{ datosMascotaLocal.sobremi_2 }}  </p>   
-        </div>
+        </div> -->
         
-
         <div class="info_bloque_2" id="divInformacion">
+            <div class="titulo_bloque_2">
+                <button mat-mini-fab >
+                    <mat-icon>person</mat-icon>
+                </button> 
+                <p> Mi Dueño</p>  
+            </div>
+
+             <div class="detalles_bloque_2"> 
+                <strong> Nombre : </strong>   
+                <p>  Percy Martinez Rosas  </p>    
+
+                <strong> Celular : </strong>   
+                <p (click)="onSendWathsapp()" > +51 987569795 </p>    
+             </div>
+        </div>
+
+
+
+        <!-- <div class="info_bloque_2" id="divInformacion">
             <div class="titulo_bloque_2">
                 <button mat-mini-fab >
                     <mat-icon>settings_phone</mat-icon>
@@ -139,7 +160,7 @@
                 <strong> Dirección : </strong>   
                 <p> {{ datosMascotaLocal.direccion }}  </p>  
              </div>
-        </div>
+        </div> -->
 
 
         <div class="info_bloque_2"  id="divMasInformacion">
@@ -152,19 +173,28 @@
 
              <div class="detalles_bloque_2">
                 <strong> Especie : </strong>   
-                <p>  {{ datosMascotaLocal.especie | uppercase }}   </p>   
+                <p>  PERRO   </p>   
+                <!-- <p>  {{ datosMascotaLocal.especie | uppercase }}   </p>    -->
             
                 <strong> Raza : </strong>   
-                <p> {{ datosMascotaLocal.raza | uppercase }} </p>  
+                <p>  MESTIZA   </p>   
+                <!-- <p> {{ datosMascotaLocal.raza | uppercase }} </p>   -->
 
                 <strong> Sexo : </strong>   
-                <p> {{ datosMascotaLocal.sexo | uppercase}}  </p>   
+                <p>  HEMBRA   </p>   
+                <!-- <p> {{ datosMascotaLocal.sexo | uppercase}}  </p>    -->
             
                 <strong> Fecha Nacimiento : </strong>   
-                <p>  {{ datosMascotaLocal.fechaNacimiento  | date:'dd-MM-yyyy'}} </p>  
+                <p>  09 - JULIO - 2022   </p>   
+                <!-- <p>  {{ datosMascotaLocal.fechaNacimiento  | date:'dd-MM-yyyy'}} </p>   -->
    
-             </div>
+                <strong>  Dirección : </strong>   
+                <p>  Av Primavera 606 Pueblo Nuevo - Chincha   </p>   
 
+             </div>
+        </div>
+
+        <div class="info_bloque_2"  id="divMasInformacion">
              <div class="titulo_bloque_2">
                 <button mat-mini-fab >
                     <mat-icon>pets</mat-icon>
@@ -174,7 +204,28 @@
 
              <div class="detalles_bloque_2">
 
+               
+
+                <strong> Mandibula Inferior : </strong>   
+                <p>  Blanco   </p>   
+
+                <strong> Pecho : </strong>      
+                <p>  Blanco   </p>   
+
+                <strong> Patas : </strong>   
+                <p>  Blanco   </p>   
+
                 <strong> Cara : </strong>   
+                <p>  Marrón   </p>   
+
+                <strong> Patas Traseras : </strong>   
+                <p>  Marrón   </p>   
+
+                <strong> Espalda : </strong>   
+                <p>  Negro   </p>   
+
+
+              <!--   <strong> Cara : </strong>   
                 <p> {{ datosMascotaLocal.c_cara }}  </p>   
             
                 <strong> Nariz : </strong>   
@@ -211,7 +262,7 @@
                 <p>  {{ datosMascotaLocal.c_cola }}   </p>  
 
                 <strong> Ojos : </strong>   
-                <p>  {{ datosMascotaLocal.c_ojos }}   </p>   
+                <p>  {{ datosMascotaLocal.c_ojos }}   </p>    -->
              </div>
 
 
@@ -219,23 +270,27 @@
                 <button mat-mini-fab >
                     <mat-icon>local_hospital</mat-icon>
                 </button> 
-                <p> Información local_hospital</p>  
+                <p> Información Médica</p>  
             </div>
 
              <div class="detalles_bloque_2">
-                <strong> Vacunas : </strong>   
-                <p>  {{ datosMascotaLocal.vacunas }}   </p>    
+                <strong> Vacuna Contra Rabia : </strong>   
+                <p>  Sí    </p>   
+                <!-- <p>  {{ datosMascotaLocal.vacunas }}   </p>     -->
+                <strong> Vacuna Contra Influencia : </strong>   
+                <p>  Sí    </p>   
+
              </div>
 
 
-             <div class="titulo_bloque_2">
+             <!--  <div class="titulo_bloque_2">
                 <button mat-mini-fab >
                     <mat-icon>favorite</mat-icon>
                 </button> 
                 <p> Preferencias</p>  
             </div>
 
-             <div class="detalles_bloque_2">
+            <div class="detalles_bloque_2">
                 <strong> Jugete Favorito: </strong>   
                 <p>  {{ datosMascotaLocal.juguetes }}   </p>   
                 
@@ -245,7 +300,7 @@
                 <strong> Lugar Favorito: </strong>   
                 <p>  {{ datosMascotaLocal.lugar_paseo }}   </p>  
  
-             </div>
+             </div> -->
 
         </div>
 

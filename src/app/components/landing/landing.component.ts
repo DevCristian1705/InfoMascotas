@@ -13,7 +13,8 @@ export class LandingComponent implements OnInit {
   Fecha = new Date();
   AnioActual = this.Fecha.getFullYear();
   datosMascotaLocal! : IDatosMascota;
-  imagePath : any = '../assets/images/mascota_default.jpg';
+ // imagePath : any = '../assets/images/mascota_default.jpg';
+  imgPocho : any = '../assets/images/mascota.png';
 
   constructor(
     private router : Router,
@@ -43,7 +44,7 @@ export class LandingComponent implements OnInit {
   }
 
   onSendWathsapp(){
-    let url ="whatsapp://send?text="+encodeURIComponent('Hola tengo informacion sobre su mascota')+"&phone="+encodeURIComponent(934560280)
+    let url ="whatsapp://send?text="+encodeURIComponent('Hola tengo informacion sobre su mascota')+"&phone="+encodeURIComponent(+51987569795)
     window.open(url);
   }
 
